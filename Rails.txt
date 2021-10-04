@@ -1,0 +1,40 @@
+The Rails philosophy includes two major guiding principles:
+    Don't Repeat Yourself - every piece of knowledge must have a single, unambiguous, authoritative representation within a system
+    Convention over Configuration - default to a set of conventions, rather than require that you specify minutiae through endless config files
+
+
+Rails comes with a number of scripts called generators that are designed to make your development life easier by creating everything that's necessary to start 
+working on a particular task. 
+One of these is the new application generator, which will provide you with the foundation of a fresh Rails app so that you don't have to write it yourself
+To use the generator, open a terminal, run: rails new blog
+This will create a Rails app called Blog in a blog directory and install the gem dependencies that are already mentioned in Gemfile using bundle install
+
+app/ - contains the controllers, models, views, helpers, mailers, channels, jobs, and assets for your app
+bin/ - contains the rails script that starts your app and can contain other scripts you use to set up, update, deploy, or run your app
+config/ - contains configuration for your app's routes, database, and more
+config.ru - contains configuration for Rack based servers used to start the app
+db - contains your current database schema, as well as the database migrations
+Gemfile, Gemfile.lock - These files allow you to specify what gem dependencies are needed for your Rails app. These are used by the Bundler Gem
+lib/ - extended modules for your app
+log/ - app log files
+package.json - allows you to specify what npm dependencies are needed for your Rails app. This file is used by Yarn
+public/ - contains static files and complied assets. When your app is running, this directory will be exposed as is
+Rakefile - locates and loads tasks that can be run from the command line. The task definitions are defined throughout the components of Rails. Rather than
+changing Rakefile, you should add your own tasks by adding files to the lib/tasks directory
+storage/ - active storage files for Disk Service
+test/ - unit tests, fixtures, and other test  apparatus
+tmp/ - temporary files (like cache and pid files)
+vendor/ - a place for all third party code
+
+Starting a web server
+ruby bin/rails server
+This will start up Puma, a web server distributed with Rails by default
+In dev, Rails does not generally require you to restart the server
+
+To get Rails to say "Hello", you need to create at minimum a route, a controller with an action, and a view. 
+A route maps a request to a controller action
+A controller action performs the necessary work to handle to request, and prepares any data for the view
+A view displays data in a desired format
+
+Controllers are Ruby classes, and their public methods are actions. 
+Views are templates, usually written in a mix of HTML and Ruby
