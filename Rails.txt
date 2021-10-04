@@ -61,3 +61,9 @@ What happens when we go to http://localhost:3000:
     Rails automatically renders the app/views/articles/index.html.erb view
     The ERB code in the view is evaluated to output HTML
     The server sends a response containing the HTML back to the browser
+
+Whenever we have such a combination of routes, controller actions, and views that work together to perform CRUD operations on an entity, we call that entity
+a resource
+In our app, we would say that an article is a resource
+Rails provides a routes method named resources that maps all of the conventional routes for a collection of resources, such as articles
+The resources method also sets up URL and path helper methods that we can use to keep our code from depending on a specific route configuration
