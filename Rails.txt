@@ -48,3 +48,16 @@ Model names are singular, because an instantiated model represents a single data
 
 Migrations are used to alter the structure of an app's database
 In Rails apps, migrations are written in Ruby so that they can be database agnostic
+
+ERB is a templating system that evaluates Ruby code embedded in a document
+<% %> means "evaluate the enclosed Ruby code"
+<%= %> means "evaluate the enclosed Ruby code, and output the value that it returns"
+
+What happens when we go to http://localhost:3000:
+    The browser makes a request: GET http://localhost:3000
+    Our Rails app receives this request
+    The Rails router maps the root route to the index action of ArticlesController
+    The index action uses the Article model to fetch all articles in the database
+    Rails automatically renders the app/views/articles/index.html.erb view
+    The ERB code in the view is evaluated to output HTML
+    The server sends a response containing the HTML back to the browser
