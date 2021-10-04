@@ -38,3 +38,13 @@ A view displays data in a desired format
 
 Controllers are Ruby classes, and their public methods are actions. 
 Views are templates, usually written in a mix of HTML and Ruby
+
+MVC (Model-View-Controller)
+A design pattern that divides the responsibilities of an app to make it easier to reason about
+
+A model is a Ruby class that is used to represent data. 
+Additionally, models can interact with the app's database through a feature of Rails called Active Record
+Model names are singular, because an instantiated model represents a single data record  
+
+Migrations are used to alter the structure of an app's database
+In Rails apps, migrations are written in Ruby so that they can be database agnostic

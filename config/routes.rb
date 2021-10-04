@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # display this on the root path "/"
   root "articles#index"
 
   # GET /articles requests are mapped to the index action of ArticlesController
