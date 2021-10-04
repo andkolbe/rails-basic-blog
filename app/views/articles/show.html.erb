@@ -1,2 +1,11 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
+
+<ul>
+    <li><%= link_to 'Edit', edit_article_path(@article) %></li>
+    <li><%= link_to 'Destroy', article_path(@article),
+                    # both of these options are powered by a feature of Rails called Unobtrusive Javascript(UJS)
+                    # the JS file that implments these behaviors is included by default in fresh Rails apps
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></li>
+</ul>
