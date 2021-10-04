@@ -78,3 +78,9 @@ The new action does not attempt to save @article. Therefore, validations are not
 
 When we submit the form, the POST /articles reqeuest is mapped to the create action. The create action does attempt to save @article. Therefore, validations are
 checked. If any validation fails, @article will not be saved, and app/views/articles/new.html.erb will be rendered with error messages
+
+Concerns
+A way to make large controllers or models easier to understand and manage
+This also has the advantage of reusability when multiple models (or controllers) share the same concerns. 
+Implemented using modules that contain methods representing a well defined slice of the functionality that a model or controller is responsible for 
+Only responsible for a focused subset of the model's responsibility
