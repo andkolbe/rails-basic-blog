@@ -67,3 +67,8 @@ a resource
 In our app, we would say that an article is a resource
 Rails provides a routes method named resources that maps all of the conventional routes for a collection of resources, such as articles
 The resources method also sets up URL and path helper methods that we can use to keep our code from depending on a specific route configuration
+
+Validations
+Rules that are checked before a model object is saved
+This feature is provided by Rails to help us deal with invalid user input
+If any of the checks fail, the save will be aborted, and the appropriate error messages will be added to the errors attribute of the model object
