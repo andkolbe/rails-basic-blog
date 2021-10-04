@@ -72,3 +72,9 @@ Validations
 Rules that are checked before a model object is saved
 This feature is provided by Rails to help us deal with invalid user input
 If any of the checks fail, the save will be aborted, and the appropriate error messages will be added to the errors attribute of the model object
+
+When we visit /articles/new, the GET /articles/new request is mapped to the new action
+The new action does not attempt to save @article. Therefore, validations are not checked, and there will be no error messages
+
+When we submit the form, the POST /articles reqeuest is mapped to the create action. The create action does attempt to save @article. Therefore, validations are
+checked. If any validation fails, @article will not be saved, and app/views/articles/new.html.erb will be rendered with error messages

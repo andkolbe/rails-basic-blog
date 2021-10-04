@@ -7,12 +7,19 @@
         <%= form.label :title %>
         <br>
         <%= form.text_field :title %>
+        <%# the full_messages_for method returns an array of user-friendly error messages for a specified attribute. If there are no errors for that attribute, the arry will be empty %>
+        <% @article.errors.full_messages_for(:title).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
     </div>
 
     <div>
         <%= form.label :body %>
         <br>
         <%= form.text_area :body %>
+        <% @article.errors.full_messages_for(:body).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
     </div>
 
     <div>
